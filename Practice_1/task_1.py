@@ -1,16 +1,15 @@
-""" 
-Тут условие задачи
-"""
-
-first_number = int(input())
-first_second = int(input())
-
-# Тут будет какой-то код
-# Возможно и тут
-# ...
-# А может даже и тут
-
-
-print(new_first_number)
-print(new_second_number)
-
+'''
+Задание №1. Дано число n. С начала суток прошло n минут. Определите, сколько
+часов и минут будут показывать электронные часы в этот момент.
+Программа должна вывести два числа: количество часов (от 0 до 23) и
+количество минут (от 0 до 59). Число n может быть больше количества минут
+в сутках.
+'''
+  
+MINUTES_IN_DAY = 1440
+MINUTES_IN_HOUR = 60
+ 
+minutes = int(input('Введите количество минут с начала суток, n='))
+current_day_minutes = minutes % MINUTES_IN_DAY
+hours, minutes = divmod(current_day_minutes, MINUTES_IN_HOUR)
+print(f'Показания электронных часов: {hours}:{minutes}')
